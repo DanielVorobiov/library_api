@@ -6,6 +6,6 @@ from proxy.views import ReverseProxy
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
-    url(r'proxy/', ReverseProxy.as_view(), name='proxy')
+    url(r'proxy/(?P<url>.*)$', ReverseProxy.as_view(), name='proxy')
 ]
 
