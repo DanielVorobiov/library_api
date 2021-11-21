@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'revproxy',
     'rest_framework',
     'api',
+    'proxy'
 ]
 
 MIDDLEWARE = [
@@ -80,7 +82,9 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'books_app_db'
     }
+    
 }
+
 
 
 # Password validation
