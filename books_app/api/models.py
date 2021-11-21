@@ -12,5 +12,5 @@ class Book(models.Model):
     language = models.CharField(max_length=10)
     original_language = models.CharField(max_length=10)
     genres = models.CharField(max_length=30)
-    page_nr = models.IntegerField(max_length=4)
+    page_nr = models.IntegerField()
     ISBN = models.CharField(max_length=20)
