@@ -79,7 +79,13 @@ WSGI_APPLICATION = 'books_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'books_app_db'
+        'NAME': 'books_app_db',
+          'CLIENT': { 
+            'host': 'mongodb://mongo:27017', 
+            'username': 'root', 
+            'password': '1234', 
+             
+        }   
     }
     
 }
@@ -129,15 +135,3 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://localhost:6379",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient"
-        },
-        "KEY_PREFIX": "example"
-    }
-}
-
-CACHE_TTL = 60 * 15
